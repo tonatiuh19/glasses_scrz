@@ -50,7 +50,7 @@ require_once('cnn.php');
   </div>
 
 
-  <div class="site-wrap">
+  <div class="site-wrap" >
 
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -68,7 +68,7 @@ require_once('cnn.php');
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <div class="mb-0 site-logo"><a href="index.html" class="mb-0"><img src="../images/logo.png" class="img-fluid"></a></div>
+            <div class="mb-0 site-logo"><a href="../" class="mb-0"><img src="../images/logo.png" class="img-fluid"></a></div>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -79,7 +79,7 @@ require_once('cnn.php');
                 <li><a href="../quienessomos/" class="nav-link">¿Quienes somos?</a></li>
                 <li><a href="../responsabilidadsocial/" class="nav-link">Responsabilidad social</a></li>
                 <li><a href="../saludvisual/" class="nav-link">Salud visual</a></li>
-                <li><a href="../tienda/" class="nav-link">Tienda</a></li>
+                <!--<li><a href="../tienda/" class="nav-link">Tienda</a></li>-->
               </ul>
             </nav>
           </div>

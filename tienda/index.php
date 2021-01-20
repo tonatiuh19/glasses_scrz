@@ -111,7 +111,9 @@ require_once('../admin/header.php');
                               <p>'.$row["description"].'
                                 <p><small>Modelo: #'.$row["sku"].'</small></p>  
                               </p>
-                              <p>'.$row["mercadopago_script"].'</p>
+                              <p>Una vez aprobado tu pago podras completar los campos faltantes, como tu correo a donde enviaremos los detalles de tu pedido, formula etc.</h3>
+                              </p>
+                              <p><a href="'.$row["mercadopago_link"].'" class="btn btn-warning">Iniciar pedido <i class="fas fa-arrow-alt-circle-right"></i></a></p>
                             </div>
                         
                     </div> 

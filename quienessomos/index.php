@@ -41,21 +41,21 @@ require_once('../admin/header.php');
 
             <!-- Indicators -->
             <ul class="carousel-indicators">
-              <li data-target="#demo" data-slide-to="0" class="active"></li>
-              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="0"></li>
+              <li data-target="#demo" data-slide-to="1" class="active"></li>
               <li data-target="#demo" data-slide-to="2"></li>
             </ul>
 
             <!-- The slideshow -->
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              <div class="carousel-item">
                 <img src="../images/FotosPersonas/carrouselFirst.jpg" width="1020" alt="">
                 <div class="carousel-caption d-none d-md-block">
                   <span class="btn btn-dark"><h3>Promover proyectos sociales</h3></span>
                   <p></p>
                 </div>
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item active">
                 <img src="../images/FotosPersonas/carrouselsec.jpg" width="1020" alt="">
                 <div class="carousel-caption d-none d-md-block">
                 <span class="btn btn-dark"><h3>Diseños de vanguardia</h3></span>
