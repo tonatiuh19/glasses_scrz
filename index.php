@@ -76,7 +76,7 @@
                 <li><a href="quienessomos/" class="nav-link">¿Quienes somos?</a></li>
                 <li><a href="responsabilidadsocial/" class="nav-link">Responsabilidad social</a></li>
                 <li><a href="saludvisual/" class="nav-link">Salud visual</a></li>
-                <!--<li><a href="tienda/" class="nav-link">Tienda</a></li>-->
+                <li><a href="tienda/" class="nav-link">Tienda</a></li>
               </ul>
             </nav>
           </div>

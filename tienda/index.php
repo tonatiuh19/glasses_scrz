@@ -44,7 +44,7 @@ require_once('../admin/header.php');
                 <p class="card-text">'.$row["marketing_name"].'</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#e'.$row["sku"].'">Comprar</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#a">Seleccionar gafas</button>
     
                   </div>
                   <p class="text-muted">$'.$priceNew.' <del class="small">$'.$priceOld.'</del></p>
@@ -135,58 +135,105 @@ require_once('../admin/header.php');
 
 </main>
 
-<!-- Modal 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <!--Modal -->
+ <div class="modal fade" id="a" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-     
       <div class="modal-body">
         <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                      <div class="container-fluid px-sm-1 py-5 mx-auto">
-                        <div class="row justify-content-center">
-                            <div class="d-flex">
-                                <div class="card">
-                                    <div class="d-flex flex-column thumbnails">
-                                        <div id="f1" class="tb tb-active"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/wL1uRBk.jpg"> </div>
-                                        <div id="f2" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/3NusNP2.jpg"> </div>
-                                        <div id="f3" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/pXUPOVR.jpg"> </div>
-                                        <div id="f4" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/xX5Qmsa.jpg"> </div>
-                                    </div>
-                                    <fieldset id="f11" class="active">
-                                        <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/wL1uRBk.jpg"> </div>
-                                    </fieldset>
-                                    <fieldset id="f21" class="">
-                                        <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/3NusNP2.jpg"> </div>
-                                    </fieldset>
-                                    <fieldset id="f31" class="">
-                                        <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/pXUPOVR.jpg"> </div>
-                                    </fieldset>
-                                    <fieldset id="f41" class="">
-                                        <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/xX5Qmsa.jpg"> </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
+            <div class="row">
+                <div class="col-sm-8 parent">
+                  <img src="img/COL0012/principal/IMG_3897.jpg">
+                </div>
+                <div class="col-sm-4">
+                  <h4>¿Que tipo de prescripcion necesitas?</h4>
+                  <p>
+                  <form>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="singleV" onclick="checkboxes()" value="option1">
+                      <label class="form-check-label" for="exampleRadios1">
+                        Vision normal
+                      </label>
                     </div>
-                    <div class="col-sm-6">
-                      <h1>Nombre</h1>
-                      <p><h3 class="text-warning">$20</h3>
-                      </p>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                        <p><small>Modelo: #123456</small></p>  
-                      </p>
-                      <p><button class="btn btn-warning">Comprar</button></p>
+                    <div class="form-check"> 
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="progressive" onclick="checkboxes()" value="option2">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Progresivas
+                      </label>
                     </div>
-                
-            </div> 
+                    <div class="form-check disabled">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="prescription" onclick="checkboxes()" value="option3">
+                      <label class="form-check-label" for="exampleRadios3">
+                        Con prescripcion
+                      </label>
+                    </div>
+                    <div class="form-check disabled">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="read" onclick="checkboxes()" value="option3">
+                      <label class="form-check-label" for="exampleRadios3">
+                        Para leer
+                      </label>
+                    </div>
+                  </form>
+                  </p>
+                </div>
+            </div>
         </div>
       </div>
     </div>
   </div>
-</div>-->
+</div>
+
+<div class="modal fade" id="b" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 parent">
+                  <img src="img/COL0012/IMG_3896.jpg">
+                </div>
+                <div class="col-sm-4">
+                  <h4 id="textTitleGlasses"></h4>
+                  <p>
+                  <form>
+                    <p>
+                    </p>
+                    <p>
+                      Con tu pago se incluye lo siguiente:
+                    </p>
+                    <p>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Gafas con material flexible de policarbonato
+                          <span class="badge badge-dark badge-pill">$ 20</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Filtro Blue-light
+                          <span class="badge badge-dark badge-pill">$ 0</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Envio
+                          <span class="badge badge-dark badge-pill">$ 0</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center prescriptionLi" id="">
+                          Prescripcion
+                          <span class="badge badge-dark badge-pill">$ 0</span>
+                        </li>
+                      </ul>
+                    </p>
+                    <p>
+                      <button type="button" class="btn btn-dark bottomBtn" id="beforeBottom"><i class="fas fa-arrow-circle-left"></i> Atras</button>
+                      <button type="submit" class="btn btn-success bottomBtnPurchase" id="purchaseBottom">Siguiente <i class="fas fa-arrow-circle-right"></i></button>
+                    </p>
+                  </form>
+                  </p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <?php
 require_once('../admin/footer.php');
 ?>

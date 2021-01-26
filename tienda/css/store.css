@@ -127,3 +127,26 @@ fieldset {
       height: 350px
   }
 }
+
+.parent {
+  /*width: 42px; /* I took the width from your post and placed it in css */
+  /*height: 42px;*/
+}
+
+/* This will style any <img> element in .parent div */
+.parent img {
+  height: 100%;
+  width: 100%;
+}
+
+.bottomBtn{
+  position: absolute;
+  left:    0;
+  bottom:   0;
+}
+
+.bottomBtnPurchase{
+  position: absolute;
+  right:    0;
+  bottom:   0;
+}
