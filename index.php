@@ -97,8 +97,8 @@
           <div class="col-lg-6 mr-auto text-center text-lg-left">
 
             <h1 class="heading mb-3">Crear un mejor mañana es mucho más que vender un par de gafas</h1>
-            <p class="mb-5">Queremos denostrar que es posible adquirir un par de gafas recetadas de manera facil, justa y responsable.</p>
-            <p class="mb-4"><a href="#learnMore" class="btn btn-primary">Tienda</a></p>
+            <p class="mb-5">Queremos demostrar que es posible adquirir un par de gafas recetadas de manera facil, justa y responsable.</p>
+            <p class="mb-4"><a href="tienda/" class="btn btn-primary">Tienda</a></p>
 
 
 
