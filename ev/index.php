@@ -16,6 +16,61 @@ window.location.href='../';
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel='stylesheet' href='css/JeeWidget.css' />
 
+    <script>
+      let _isResized = false;
+      function test_resizeCanvas() {
+        // halves the height:
+        let halfHeightPx = Math.round(window.innerHeight / 2).toString() + 'px';
+
+        const domWidget = document.getElementById('JeeWidget');
+        domWidget.style.maxHeight = (_isResized) ? 'none' : halfHeightPx;
+
+        _isResized = !_isResized;
+      }
+
+      // entry point:
+      function main() {
+        JEEWIDGET.start({
+          sku: 'aliexpress_steampunk_gold_clear',
+          searchImageMask: '',
+          searchImageColor: 0xeeeeee,
+          callbackReady: function(){
+            console.log('INFO: JEEWIDGET is ready :)');
+          },
+          onError: function(errorLabel){ // this function catches errors, so you can display custom integrated messages
+            alert('An error happened. errorLabel =' + errorLabel)
+            switch(errorLabel) {
+              case 'NOFILE':
+                // the user send an image, but it is not here
+                break;
+
+              case 'WRONGFILEFORMAT':
+                // the user upload a file which is not an image or corrupted
+                break;
+
+              case 'INVALID_SKU':
+                // the provided SKU does not match with a glasses model
+                break;
+
+              case 'FALLBACK_UNAVAILABLE':
+                // we cannot switch to file upload mode. browser too old?
+                break;
+
+              case 'PLACEHOLDER_NULL_WIDTH':
+              case 'PLACEHOLDER_NULL_HEIGHT':
+                // Something is wrong with the placeholder
+                // (element whose id='JeeWidget')
+                break;
+
+              case 'FATAL':
+              default:
+                // a bit error happens:(
+                break;
+            } // end switch
+          } // end onError()
+        }) // end JEEWIDGET.start call
+      } // end main()
+    </script>
   </head>
 
   <body onload="main()">
@@ -75,61 +130,5 @@ window.location.href='../';
 
       </div>
     </div>
-
-    <script>
-      let _isResized = false;
-      function test_resizeCanvas() {
-        // halves the height:
-        let halfHeightPx = Math.round(window.innerHeight / 2).toString() + 'px';
-
-        const domWidget = document.getElementById('JeeWidget');
-        domWidget.style.maxHeight = (_isResized) ? 'none' : halfHeightPx;
-
-        _isResized = !_isResized;
-      }
-
-      // entry point:
-      function main() {
-        JEEWIDGET.start({
-          sku: 'aliexpress_steampunk_gold_clear',
-          searchImageMask: '',
-          searchImageColor: 0xeeeeee,
-          callbackReady: function(){
-            console.log('INFO: JEEWIDGET is ready :)');
-          },
-          onError: function(errorLabel){ // this function catches errors, so you can display custom integrated messages
-            alert('An error happened. errorLabel =' + errorLabel)
-            switch(errorLabel) {
-              case 'NOFILE':
-                // the user send an image, but it is not here
-                break;
-
-              case 'WRONGFILEFORMAT':
-                // the user upload a file which is not an image or corrupted
-                break;
-
-              case 'INVALID_SKU':
-                // the provided SKU does not match with a glasses model
-                break;
-
-              case 'FALLBACK_UNAVAILABLE':
-                // we cannot switch to file upload mode. browser too old?
-                break;
-
-              case 'PLACEHOLDER_NULL_WIDTH':
-              case 'PLACEHOLDER_NULL_HEIGHT':
-                // Something is wrong with the placeholder
-                // (element whose id='JeeWidget')
-                break;
-
-              case 'FATAL':
-              default:
-                // a bit error happens:(
-                break;
-            } // end switch
-          } // end onError()
-        }) // end JEEWIDGET.start call
-      } // end main()
-    </script>
   </body>
 </html>
