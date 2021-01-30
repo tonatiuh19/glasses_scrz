@@ -1,7 +1,11 @@
 <?php
-/*echo ("<SCRIPT LANGUAGE='JavaScript'>
-window.location.href='../';
-</SCRIPT>");*/
+require_once('../admin/cnn.php');
+date_default_timezone_set('America/Mexico_City');
+if (!($_GET["sku"])) {
+  $sku='aliexpress_steampunk_gold_clear';
+}else{
+  $sku = $_GET["nombre"];
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,13 +26,6 @@ window.location.href='../';
     <div class='content'>
 
 
-      <div class='header'>
-        <div class="headerTitle">
-          Espejo virtual - Santa Cruz
-        </div>
-      </div>
-
-
 
       <div id='JeeWidget'>
         <!-- MAIN CANVAS: -->
@@ -42,33 +39,21 @@ window.location.href='../';
         <div class='JeeWidgetControls JeeWidgetControlsTop'>
           <!-- ADJUST BUTTON: -->
           <button id='JeeWidgetAdjust'>
-            <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>Adjust
+            <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>Ajustar
           </button>
 
-          <!-- RESIZE WIDGET BUTTON: -->
-          <button id='buttonResizeCanvas' onclick='test_resizeCanvas();'>
-            <div class="buttonIcon"><i class="fas fa-sync-alt"></i></div>Resize widget
-          </button>
-        </div>
-
-        <!-- CHANGE MODEL BUTTONS: -->
-        <div class='JeeWidgetControls' id='JeeWidgetChangeModelContainer'>
-          <button onclick="JEEWIDGET.load('rayban_aviator_or_vertFlash')">Model 1</button>
-          <button onclick="JEEWIDGET.load('rayban_round_cuivre_pinkBrownDegrade')">Model 2</button>
-          <button onclick="JEEWIDGET.load('rayban_wayfarer_denimNoir_bleuMirroir')">Model 3</button>
-        </div>
 
         <!-- BEGIN ADJUST NOTICE -->
         <div id='JeeWidgetAdjustNotice'>
-          Move the glasses to adjust them.
-          <button class='JeeWidgetBottomButton' id='JeeWidgetAdjustExit'>Quit</button>
+          Mueve las gafas para ajustarlas
+          <button class='JeeWidgetBottomButton' id='JeeWidgetAdjustExit'>Cerrar</button>
         </div>
         <!-- END AJUST NOTICE -->
 
         <!-- BEGIN LOADING WIDGET (not model) -->
         <div id='JeeWidgetLoading'>
            <div class='JeeWidgetLoadingText'>
-              LOADING...
+              Cargando
             </div>
         </div>
         <!-- END LOADING -->
@@ -76,53 +61,43 @@ window.location.href='../';
       </div>
     </div>
 
-    <script>
-      let _isResized = false;
-      function test_resizeCanvas() {
-        // halves the height:
-        let halfHeightPx = Math.round(window.innerHeight / 2).toString() + 'px';
 
-        const domWidget = document.getElementById('JeeWidget');
-        domWidget.style.maxHeight = (_isResized) ? 'none' : halfHeightPx;
-
-        _isResized = !_isResized;
-      }
-
+    <?php
+      echo '<script>
       // entry point:
       function main() {
         JEEWIDGET.start({
-          sku: 'aliexpress_steampunk_gold_clear',
-          searchImageMask: '',
+          sku: "'.$sku.'",
+          searchImageMask: "",
           searchImageColor: 0xeeeeee,
           callbackReady: function(){
-            console.log('INFO: JEEWIDGET is ready :)');
+            console.log("INFO: JEEWIDGET is ready :)");
           },
           onError: function(errorLabel){ // this function catches errors, so you can display custom integrated messages
-            alert('An error happened. errorLabel =' + errorLabel)
+            alert("An error happened. errorLabel =" + errorLabel)
             switch(errorLabel) {
-              case 'NOFILE':
+              case "NOFILE":
                 // the user send an image, but it is not here
                 break;
 
-              case 'WRONGFILEFORMAT':
+              case "WRONGFILEFORMAT":
                 // the user upload a file which is not an image or corrupted
                 break;
 
-              case 'INVALID_SKU':
+              case "INVALID_SKU":
                 // the provided SKU does not match with a glasses model
                 break;
 
-              case 'FALLBACK_UNAVAILABLE':
+              case "FALLBACK_UNAVAILABLE":
                 // we cannot switch to file upload mode. browser too old?
                 break;
 
-              case 'PLACEHOLDER_NULL_WIDTH':
-              case 'PLACEHOLDER_NULL_HEIGHT':
-                // Something is wrong with the placeholder
-                // (element whose id='JeeWidget')
+              case "PLACEHOLDER_NULL_WIDTH":
+              case "PLACEHOLDER_NULL_HEIGHT":
+               
                 break;
 
-              case 'FATAL':
+              case "FATAL":
               default:
                 // a bit error happens:(
                 break;
@@ -130,6 +105,8 @@ window.location.href='../';
           } // end onError()
         }) // end JEEWIDGET.start call
       } // end main()
-    </script>
+    </script>';
+    ?>
+    
   </body>
 </html>

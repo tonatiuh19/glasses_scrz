@@ -40,14 +40,24 @@ require_once('../admin/header.php');
                 }
               }
               
-              echo '<div class="card-body">
+              echo '<div class="card-body text-center">
                 <p class="card-text">'.$row["marketing_name"].'</p>
+                <p class="text-muted">$'.$priceNew.' <del class="small">$'.$priceOld.'</del></p>
                 <div class="d-flex justify-content-between align-items-center">
+                
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#a'.$row["sku"].'">Seleccionar gafas</button>
-    
-                  </div>
-                  <p class="text-muted">$'.$priceNew.' <del class="small">$'.$priceOld.'</del></p>
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#a'.$row["sku"].'">Seleccionar gafas</button>';
+                  
+                    ?>
+                    <a href="../espejovirtual/" 
+                      target="popup" 
+                      class="btn btn-sm btn-outline-primary"
+                      onclick="window.open('../espejovirtual/','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
+                        Abir espejo
+                    </a>
+                    <?php
+                  echo '</div>
+                  
                 </div>
               </div>
             </div>
