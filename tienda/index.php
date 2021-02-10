@@ -20,7 +20,7 @@ require_once('../admin/header.php');
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <div class="row">
       <?php
-      $sql = "SELECT sku, code_number, marketing_name, price, description, reference, color, design, mercadopago_link, mercadopago_script, active FROM products WHERE active=1";
+      $sql = "SELECT sku, code_number, marketing_name, price, description, reference, color, design, mercadopago_link, mercadopago_script, mirror, active FROM products WHERE active=1";
       $result = $conn->query($sql);
       
       if ($result->num_rows > 0) {
@@ -47,15 +47,13 @@ require_once('../admin/header.php');
                 
                   <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#a'.$row["sku"].'">Seleccionar gafas</button>';
-                  
-                    ?>
-                    <a href="../espejovirtual/" 
-                      target="popup" 
-                      class="btn btn-sm btn-outline-primary"
-                      onclick="window.open('../espejovirtual/','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
-                        Abir espejo
-                    </a>
-                    <?php
+                    echo "<a href=\"../espejovirtual/\" \n";
+                    echo "                      target=\"popup\" \n";
+                    echo "                      class=\"btn btn-sm btn-outline-primary\"\n";
+                    echo "                      onclick=\"window.open('../espejovirtual/?sku=".$row["mirror"]."','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;\">\n";
+                    echo "                        Abir espejo\n";
+                    echo "                    </a>";
+                    
                   echo '</div>
                   
                 </div>
