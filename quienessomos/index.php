@@ -1,5 +1,7 @@
 <?php
 require_once('../admin/header.php');
+//require_once('../admin/visitors.php');
+//visitors('QuienesSomos');
 ?>
     <div class="hero-v1">
       <div class="container">
@@ -8,7 +10,7 @@ require_once('../admin/header.php');
             <span class="d-block subheading"></span>
             <h1 class=" mb-3"></h1>
             <h3 class="mb-5">Santa Cruz fue fundado pensando en las comunidades que mas necesitan ayuda. Ofrecemos gafas formuladas, con diseño de vanguardia a precios justos, promoviendo proyectos sociales.</h3>
-            <p class="mb-4"><a href="#main" class="btn btn-primary">Saber mas</a></p>
+            <p class="mb-4"><a href="../tienda/" class="btn btn-primary">Tienda</a></p>
 
 
 

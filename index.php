@@ -1,3 +1,7 @@
+<?php
+require_once('admin/visitors.php');
+visitors('Main');
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -291,7 +295,7 @@
           <div class="col-lg-5 ml-auto">
             <h2 class="section-heading mb-4">Prueba nuestro espejo virtual</h2>
             <p>Contamos con un espejo virtual en el cual tienes la oportunidad de probar looks diferentes y elegir el que mas te guste.</p>
-            <p><a href="#" class="btn btn-primary">Entrar</a></p>
+            <p><a href="tienda/" class="btn btn-primary">Entrar a tienda</a></p>
           </div>
         </div>
       </div>

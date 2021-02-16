@@ -1,5 +1,7 @@
 <?php
 require_once('../admin/header.php');
+//require_once('../admin/visitors.php');
+//visitors('Tienda');
 ?>
 <link rel="stylesheet" href="css/store.css">
     <main role="main">
@@ -9,8 +11,8 @@ require_once('../admin/header.php');
     <h1 class="jumbotron-heading">Aqui esta la tienda</h1>
     <p class="lead text-muted">Mensaje de compranos.</p>
     <p>
-      <a href="#" class="btn btn-primary my-2">Responsabilidad Social</a>
-      <a href="#" class="btn btn-secondary my-2">Salud Visual</a>
+      <a href="../responsabilidadsocial/" class="btn btn-primary my-2">Responsabilidad Social</a>
+      <a href="../saludvisual/" class="btn btn-secondary my-2">Salud Visual</a>
     </p>
   </div>
 </section>
@@ -46,6 +48,7 @@ require_once('../admin/header.php');
                 <div class="d-flex justify-content-between align-items-center">
                 
                   <div class="btn-group">
+                    
                     <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#a'.$row["sku"].'">Seleccionar gafas</button>';
                     echo "<a href=\"../espejovirtual/\" \n";
                     echo "                      target=\"popup\" \n";

@@ -1,5 +1,7 @@
 <?php
 require_once('../admin/header.php');
+//require_once('../admin/visitors.php');
+//visitors('ResponsabilidadSocial');
 ?>
    <link rel="stylesheet" href="css/style.css">
     <!-- MAIN -->

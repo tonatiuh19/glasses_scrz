@@ -1,10 +1,13 @@
 <?php
 require_once('../admin/cnn.php');
+//require_once('../admin/visitors.php');
+//visitors('EspejoVirtual');
 date_default_timezone_set('America/Mexico_City');
 if (!($_GET["sku"])) {
   $sku='aliexpress_steampunk_gold_clear';
 }else{
-  $sku = $_GET["nombre"];
+  $sku = $_GET["sku"];
+  //$sku='aliexpress_steampunk_gold_clear';
 }
 ?>
 <!DOCTYPE html>
