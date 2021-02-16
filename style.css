@@ -1263,14 +1263,6 @@ figure:hover img {
   height: 2.5rem;            /* Footer height */
 }
 
-.btnsWizardModals {
-  padding-top: 10%;
-}
-
-.modal {
-  overflow-y:auto;
-}
-
 div.dropdown-backdrop {
   z-index: -1;
 } 

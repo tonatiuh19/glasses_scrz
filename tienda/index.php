@@ -258,8 +258,8 @@ require_once('../admin/header.php');
                                     </div>
                                   </div>
                                 </p>
-                                <p>
-                                  <button type="button" class="btn btn-dark bottomBtn" id="beforeBottom'.$row["sku"].'"><i class="fas fa-arrow-circle-left"></i> Atras</button>
+                                <p class="btnsWizardModals">
+                                  <button type="button" class="btn btn-dark bottomBtn" id="bReadbeforeBottom'.$row["sku"].'" onclick="bReadModal'.$row["sku"].'()"><i class="fas fa-arrow-circle-left"></i> Atras</button>
                                   <button type="button" class="btn btn-success bottomBtnPurchase" id="purchaseBottom'.$row["sku"].'" onclick="btnGoToModalB'.$row["sku"].'()">Siguiente <i class="fas fa-arrow-circle-right"></i></button>
                                 </p>
                               </form>
@@ -333,8 +333,8 @@ require_once('../admin/header.php');
                                     </div>
                                   </ul>
                                 </p>
-                                <p>
-                                  <button type="button" class="btn btn-dark bottomBtn" id="beforeBottom'.$row["sku"].'"><i class="fas fa-arrow-circle-left"></i> Atras</button>
+                                <p class="btnsWizardModals">
+                                  <button type="button" class="btn btn-dark bottomBtn" id="bbeforeBottom'.$row["sku"].'" onclick="bModal'.$row["sku"].'()"><i class="fas fa-arrow-circle-left"></i> Atras</button>
                                   <button type="button" class="btn btn-success bottomBtnPurchase" id="purchaseBottom'.$row["sku"].'" onclick="btnCheckout'.$row["sku"].'()">Siguiente <i class="fas fa-arrow-circle-right"></i></button>
                                 </p>
                               </form>
@@ -457,8 +457,8 @@ require_once('../admin/header.php');
                                     </div>
                                   </p>
                                 </p>
-                                <p>
-                                  <button type="button" class="btn btn-dark bottomBtn" id="beforeBottomPurchase'.$row["sku"].'"><i class="fas fa-arrow-circle-left"></i> Atras</button>
+                                <p class="btnsWizardModals">
+                                  <button type="button" class="btn btn-dark bottomBtn" id="cbeforeBottomPurchase'.$row["sku"].'" onclick="cModal'.$row["sku"].'()"><i class="fas fa-arrow-circle-left"></i> Atras</button>
                                   <button type="button" class="btn btn-success bottomBtnPurchase" onclick="formPayment'.$row["sku"].'()">Pagar <i class="fas fa-arrow-circle-right"></i></button>
                                 </p>
                               </form>
@@ -535,6 +535,21 @@ require_once('../admin/header.php');
             const btnGoToModalB'.$row["sku"].' = () =>{
                 $("#bRead'.$row["sku"].'").modal("hide"); 
                 $("#b'.$row["sku"].'").modal("show");
+            }
+
+            const bReadModal'.$row["sku"].' = () => {
+              $("#bRead'.$row["sku"].'").modal("hide"); 
+              $("#a'.$row["sku"].'").modal("show");
+            }
+
+            const bModal'.$row["sku"].' = () => {
+              $("#b'.$row["sku"].'").modal("hide"); 
+              $("#a'.$row["sku"].'").modal("show");
+            }
+
+            const cModal'.$row["sku"].' = () => {
+              $("#c'.$row["sku"].'").modal("hide"); 
+              $("#b'.$row["sku"].'").modal("show");
             }
             
             const formPayment'.$row["sku"].' = () => {
