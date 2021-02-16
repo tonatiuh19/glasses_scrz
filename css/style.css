@@ -1262,3 +1262,7 @@ figure:hover img {
   width: 100%;
   height: 2.5rem;            /* Footer height */
 }
+
+div.dropdown-backdrop {
+  z-index: -1;
+} 

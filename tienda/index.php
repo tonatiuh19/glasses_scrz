@@ -6,8 +6,7 @@ require_once('../admin/header.php');
 
 <section class="jumbotron text-center">
   <div class="container">
-    <h1 class="jumbotron-heading">Aqui esta la tienda</h1>
-    <p class="lead text-muted">Mensaje de compranos.</p>
+    <h1 class="jumbotron-heading">Mira el mundo a través de nuestros lentes.</h1>
     <p>
       <a href="#" class="btn btn-primary my-2">Responsabilidad Social</a>
       <a href="#" class="btn btn-secondary my-2">Salud Visual</a>
@@ -42,10 +41,10 @@ require_once('../admin/header.php');
               
               echo '<div class="card-body text-center">
                 <p class="card-text">'.$row["marketing_name"].'</p>
-                <p class="text-muted">$'.$priceNew.' <del class="small">$'.$priceOld.'</del></p>
-                <div class="d-flex justify-content-between align-items-center">
-                
-                  <div class="btn-group">
+                <p class="text-muted">$'.number_format($priceNew).' <del class="small">$'.number_format($priceOld).'</del></p>
+                <div class="d-flex justify-content-between align-items-center">';
+                  echo '<button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#a'.$row["sku"].'">Seleccionar gafas</button>';
+                  /*echo '<div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#a'.$row["sku"].'">Seleccionar gafas</button>';
                     echo "<a href=\"../espejovirtual/\" \n";
                     echo "                      target=\"popup\" \n";
@@ -54,9 +53,9 @@ require_once('../admin/header.php');
                     echo "                        Abir espejo\n";
                     echo "                    </a>";
                     
-                  echo '</div>
+                  echo '</div>';*/
                   
-                </div>
+                echo '</div>
               </div>
             </div>
           </div>';

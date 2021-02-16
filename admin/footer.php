@@ -5,8 +5,8 @@
 
             <p><a href="#">¿Quienes Somos?</a></p>
             <div class="my-5">
-              <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-              <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              <a href="https://www.facebook.com/SantaCruzEW" target="_blank" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+              <a href="https://www.instagram.com/santacruzeyewear/" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
             </div>
           </div>
           <!--<div class="col-lg-8">

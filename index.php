@@ -34,6 +34,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -97,7 +98,7 @@
           <div class="col-lg-6 mr-auto text-center text-lg-left">
 
             <h1 class="heading mb-3">Crear un mejor mañana es mucho más que vender un par de gafas</h1>
-            <p class="mb-5">Queremos demostrar que es posible adquirir un par de gafas recetadas de manera facil, justa y responsable.</p>
+            <p class="mb-5">Queremos demostrar que es posible adquirir un par de gafas recetadas de manera fácil, justa y responsable.</p>
             <p class="mb-4"><a href="tienda/" class="btn btn-primary">Tienda</a></p>
 
 
@@ -164,12 +165,12 @@
           <div class="col-lg-6 mb-4 mb-lg-0">
             <figure class="img-play-vid">
               <img src="https://www.ecured.cu/images/2/28/Santa-Cruz-del-Islote-isla-mas-densamente-poblada-mundo.jpg" alt="Image" class="img-fluid">
-              <div class="absolute-block d-flex">
+              <!--<div class="absolute-block d-flex">
                 <span class="text">Ver video</span>
                 <a href="https://www.youtube.com/watch?v=0FKSGo4s_Dw" data-fancybox class="btn-play">
                   <span class="icon-play"></span>
                 </a>
-              </div>
+              </div>-->
             </figure>
           </div>
           <div class="col-lg-5 ml-auto">
@@ -304,8 +305,8 @@
 
             <p><a href="#">¿Quienes Somos?</a></p>
             <div class="my-5">
-              <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-              <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              <a href="https://www.facebook.com/SantaCruzEW" target="_blank" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+              <a href="https://www.instagram.com/santacruzeyewear/" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
             </div>
           </div>
           <!--<div class="col-lg-8">
