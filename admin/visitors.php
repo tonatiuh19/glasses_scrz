@@ -1,10 +1,8 @@
 <?php
-
-
-
-
 function visitors($section){
-    require_once('cnn.php');
+    if (!isset($servername)) {
+        require_once('cnn.php');
+    }
     require_once('mob/Mobile_Detect.php');
     date_default_timezone_set('America/Mexico_City');
     $today = date("Y-m-d H:i:s");

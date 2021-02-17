@@ -9,6 +9,24 @@ if (!($_GET["sku"])) {
   $sku = $_GET["sku"];
   //$sku='aliexpress_steampunk_gold_clear';
 }
+
+require_once('../admin/mob/Mobile_Detect.php');
+$today = date("Y-m-d H:i:s");
+$detect = new Mobile_Detect();
+if ($detect->isMobile()){
+    $mobile = 1;
+}
+else {
+    $mobile = 0;
+}
+$sql = "INSERT INTO visitors (section, is_mobile, date)
+VALUES ('EspejoVirtual', '$mobile', '$today')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 ?>
 <!DOCTYPE html>
 <html>
